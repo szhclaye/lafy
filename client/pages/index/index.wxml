@@ -1,12 +1,63 @@
 <!--index.wxml-->
 <view class="container">
   <view class='main-banner'>
- 
-    <image class="main-image" src="../../images/main.png" mode="widthFix" ></image>
-    <view class='logo'>
-      <image class='image-logo' src='../../images/logo.png' mode='aspectFix'></image>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key='userInfoID'>
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" mode="widthFix" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <image class='logo' src='../../images/logo.png' mode='aspectFit'></image>
+    <text class='lawfy'>六安微法院</text>
+  </view>
+
+  <!--panel-->
+  <view class='panel'>
+    <view class='panel-header'>
+      <text class='welcome'>欢迎您，{{logged ? userInfo.nickName : ''}}</text>
+      <text class='identify'>身份认证</text>
+    </view>
+    <view class='panel-body-top'>
+      <view class='case-left'>
+        <view class='case-left-image'>
+          <image class='case-image' src='../../images/icons/online-case.png' />
+        </view>
+        <view class='case-left-text'>
+          <text class='case-h3'>在线立案</text>
+          <text class='case-content'>掌上立案 快速便捷</text>
+        </view>
+      </view>
+      <view class='case-right'>
+        <view class='case-right-image'>
+          <image class='case-image' src='../../images/icons/case.png' />
+        </view>
+        <view class='case-right-text'>
+          <text class='case-h3'>我的案件</text>
+          <text class='case-content'>案件收纳 轻松办理</text>
+        </view>
+      </view>
+    </view>
+    <view class='panel-body-down'>
+        <view class='navigator'>
+          <image class='navigartor-image' src='../../images/icons/courtgoing.png' />
+          <text>在线开庭</text>
+        </view>
+        <view class='navigator'>
+          <image class='navigartor-image' src='../../images/icons/songda.png' />
+          <text>文书送达</text>
+        </view>
+        <view class='navigator'>
+          <image class='navigartor-image' src='../../images/icons/weixin.png' />
+          <text>微信缴费</text>
+        </view>
+        <view class='navigator'>
+          <image class='navigartor-image' src='../../images/icons/baoguang.png' />
+          <text>执行曝光</text>
+        </view>
     </view>
   </view>
+
 
   <!-- 用户登录测试 -->
   <view class="userinfo" bindtap="login">
