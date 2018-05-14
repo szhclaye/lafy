@@ -15,8 +15,10 @@
   <!--panel-->
   <view class='panel'>
     <view class='panel-header'>
-      <text class='welcome'>欢迎您，{{logged ? userInfo.nickName : ''}}</text>
-      <text class='identify'>身份认证</text>
+      <text class='welcome'>欢迎您，</text>
+      <text class='nickname'>{{logged ? userInfo.nickName : ''}}</text>
+      <image class="panel-avatar" src="{{userInfo.avatarUrl}}"></image>
+      <text class='identify'>完善信息</text>
     </view>
     <view class='panel-body-top'>
       <view class='case-left'>
@@ -39,53 +41,52 @@
       </view>
     </view>
     <view class='panel-body-down'>
-        <view class='navigator'>
-          <image class='navigartor-image' src='../../images/icons/courtgoing.png' />
-          <text>在线开庭</text>
-        </view>
-        <view class='navigator'>
-          <image class='navigartor-image' src='../../images/icons/songda.png' />
-          <text>文书送达</text>
-        </view>
-        <view class='navigator'>
-          <image class='navigartor-image' src='../../images/icons/weixin.png' />
-          <text>微信缴费</text>
-        </view>
-        <view class='navigator'>
-          <image class='navigartor-image' src='../../images/icons/baoguang.png' />
-          <text>执行曝光</text>
-        </view>
+      <view class='navigator'>
+        <image class='navigartor-image' src='../../images/icons/courtgoing.png' />
+        <text>在线开庭</text>
+      </view>
+      <view class='navigator'>
+        <image class='navigartor-image' src='../../images/icons/songda.png' />
+        <text>文书送达</text>
+      </view>
+      <view class='navigator'>
+        <image class='navigartor-image' src='../../images/icons/weixin.png' />
+        <text>微信缴费</text>
+      </view>
+      <view class='navigator'>
+        <image class='navigartor-image' src='../../images/icons/baoguang.png' />
+        <text>执行曝光</text>
+      </view>
     </view>
   </view>
 
-
-  <!-- 用户登录测试 -->
-  <view class="userinfo" bindtap="login">
-    <image class="userinfo-avatar" src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}" background-size="cover"></image>
-    <view>
-      <text class="userinfo-nickname">{{logged ? userInfo.nickName : '点击测试登录接口'}}</text>
-      <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.lastLoginTime}}</text>
+  <!-- 江淮风暴 -->
+  <view class="jianghfb">
+    <view class='header'>
+      <text>江淮风暴</text>
     </view>
-  </view>
-
-  <!-- 上传图片测试 -->
-  <view class="uploader">
-    <view class="uploader-text" bindtap="doUpload">
-      <text>上传图片</text>
-    </view>
-    <view class="uploader-container" wx:if="{{imgUrl}}">
-      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
-    </view>
-  </view>
-
-  <!-- 信道连接测试 -->
-  <view class="tunnel">
-    <view class="tunnel-text">
-      <text>信道</text>
-      <switch class="tunnel-switch" bindchange="switchChange" color="#007AFF" />
-    </view>
-    <view class="tunnel-text {{ tunnelStatus && tunnelStatus === 'connected' ? 'active' : 'disable' }}" bindtap="sendMessage">
-      <text>发送消息</text>
+    <view class='body'>
+      <view class='jhfb-left-body'>
+        <image class='jh-image-left' src='../../images/jianghuai.png' mode='aspectFit'></image>
+      </view>
+      <view class='jhfb-right-body'>
+         <view class='jhfb-laolai'>
+            <image class='jhfb-right-image' src='../../images/icons/baoguang.png' mode='aspectFit'></image>
+            <text class='jhfb-right-text'>老赖曝光</text>
+         </view>
+         <view class='jhfb-qiye'>
+           <image class='jhfb-right-image' src='../../images/icons/qiye.png' mode='aspectFit'></image>
+            <text class='jhfb-right-text'>失信企业</text>
+         </view>
+         <view class='jhfb-paimai'>
+          <image class='jhfb-right-image' src='../../images/icons/paimai.png' mode='aspectFit'></image>
+            <text class='jhfb-right-text'>司法拍卖</text>
+         </view>
+         <view class='jhfb-xuanshang'>
+          <image class='jhfb-right-image' src='../../images/icons/xuanshang.png' mode='aspectFit'></image>
+            <text class='jhfb-right-text'>悬赏公告</text>
+         </view>
+      </view>
     </view>
   </view>
 

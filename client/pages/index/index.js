@@ -19,7 +19,9 @@ Page({
         interval: 5000,
         duration: 1000
     },
-
+    onLoad:function(){
+      this.login();
+    },
     // 用户登录示例
     login: function() {
         if (this.data.logged) return

@@ -1,38 +1,40 @@
 {
-  "pages":[
-    "pages/index/index"
+  "pages": [
+    "pages/index/index",
+    "pages/news/news",
+    "pages/mine/mine"
   ],
-  "window":{
-    "backgroundColor":"#F6F6F6",
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "86d7fb",
     "navigationBarTitleText": "六安微法院",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
-    "tabBar": {
-      "color": "#666666",
-      "selectedColor": "#1296db",
-      "borderStyle": "white",
-      "backgroundColor": "#FAFAFA",
-      "list": [
-        {
-          "iconPath": "images/icons/court.png",
-          "selectedIconPath": "images/icons/court-active.png",
-          "pagePath": "pages/index/index",
-          "text": "首页"
-        },
-        {
-          "iconPath": "images/icons/news.png",
-          "selectedIconPath": "images/icons/news-active.png",
-          "pagePath": "pages/index/index",
-          "text": "新闻"
-        },
-        {
-          "iconPath": "images/icons/me.png",
-          "selectedIconPath": "images/icons/me-active.png",
-          "pagePath": "pages/index/index",
-          "text": "我的"
-        }
-      ]
-    }
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "backgroundColor": "#FAFAFA",
+    "list": [
+      {
+        "iconPath": "images/icons/court.png",
+        "selectedIconPath": "images/icons/court-active.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "images/icons/news.png",
+        "selectedIconPath": "images/icons/news-active.png",
+        "pagePath": "pages/news/news",
+        "text": "新闻"
+      },
+      {
+        "iconPath": "images/icons/me.png",
+        "selectedIconPath": "images/icons/me-active.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  }
 }

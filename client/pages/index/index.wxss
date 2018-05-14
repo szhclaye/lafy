@@ -68,8 +68,19 @@ page {
   margin-left: 50rpx;
 }
 
+.panel-header .nickname {
+  color: red;
+  margin-left: -220rpx;
+}
+
 .panel-header .identify {
   margin-right: 50rpx;
+}
+
+.panel-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: -200rpx;
 }
 
 .panel-body-top {
@@ -137,7 +148,8 @@ page {
   width: 70%;
   margin-left: 10rpx;
 }
-.panel-body-down{
+
+.panel-body-down {
   width: 100%;
   height: 170rpx;
   background: #fff;
@@ -146,139 +158,91 @@ page {
   justify-content: space-around;
   align-items: center;
 }
-.panel-body-down .navigator{
+
+.panel-body-down .navigator {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.panel-body-down .navigator:first-child{
- margin-left: 20rpx;
+
+.panel-body-down .navigator:first-child {
+  margin-left: 20rpx;
 }
-.panel-body-down .navigator:last-child{
- margin-right: 20rpx;
+
+.panel-body-down .navigator:last-child {
+  margin-right: 20rpx;
 }
-.panel-body-down .navigartor-image{
+
+.panel-body-down .navigartor-image {
   width: 70rpx;
   height: 70rpx;
   margin-left: 20rpx;
   margin-bottom: 20rpx;
-} 
+}
 
+/**江淮风暴模块 */
 
-
-.userinfo, .uploader, .tunnel {
-  margin-top: 440rpx;
-  height: 140rpx;
+.jianghfb {
   width: 100%;
+  height: 450rpx;
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: none;
-  border-right: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  transition: all 300ms ease;
+  margin-top: 30rpx;
 }
 
-.userinfo-avatar {
-  width: 100rpx;
+.jianghfb .header {
+  width: 100%;
   height: 100rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  font-size: 32rpx;
-  color: #007aff;
-}
-
-.uploader, .tunnel {
-  height: auto;
-  padding: 0 0 0 40rpx;
-  flex-direction: column;
-  align-items: flex-start;
-  box-sizing: border-box;
-}
-
-.uploader-text, .tunnel-text {
-  width: 100%;
-  line-height: 52px;
-  font-size: 34rpx;
-  color: #007aff;
-}
-
-.uploader-container {
-  width: 100%;
-  height: 400rpx;
-  padding: 20rpx 20rpx 20rpx 0;
+  border-bottom: 1px solid #e8e8e8;
   display: flex;
-  align-content: center;
   justify-content: center;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  align-items: center;
 }
 
-.uploader-image {
+.jianghfb .header text {
+  font-size: 15px;
+  margin: 20rpx 0;
+}
+
+.jianghfb .body {
   width: 100%;
-  height: 360rpx;
-}
-
-.tunnel {
-  padding: 0 0 0 40rpx;
-}
-
-.tunnel-text {
-  position: relative;
-  color: #222;
+  height: 350rpx;
   display: flex;
   flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.tunnel-text:first-child {
-  border-top: none;
+.jianghfb .jhfb-left-body {
+  width: 38.2%;
+  border-right: 1px solid #e8e8e8;
 }
 
-.tunnel-switch {
-  position: absolute;
-  right: 20rpx;
-  top: -2rpx;
+.jianghfb .jhfb-right-body {
+  width: 61.8%;
 }
-
-.disable {
-  color: #888;
+.jianghfb .jh-image-left{
+  width: 100%;
+  height: 100%;
 }
-
-.service {
-  position: fixed;
-  right: 40rpx;
-  bottom: 40rpx;
-  width: 140rpx;
-  height: 140rpx;
-  border-radius: 50%;
-  background: linear-gradient(#007aff, #0063ce);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+.jianghfb .jhfb-right-body{
   display: flex;
-  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.jianghfb .jhfb-laolai,.jhfb-qiye,.jhfb-paimai,.jhfb-xuanshang{
+  width: 49%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  transition: all 300ms ease;
+  align-items: center;
+  font-size: 15px;
+   border-right: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+.jhfb-right-image{
+  width: 35%; 
+  margin-top: 10rpx;
+}
+.jhfb-right-text{
+  margin-bottom:20rpx;
 }
 
-.service-button {
-  position: absolute;
-  top: 40rpx;
-}
-
-.service:active {
-  box-shadow: none;
-}
-
-.request-text {
-  padding: 20rpx 0;
-  font-size: 24rpx;
-  line-height: 36rpx;
-  word-break: break-all;
-}
