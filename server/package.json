@@ -12,6 +12,8 @@
     "license": "MIT",
     "dependencies": {
         "axios": "^0.15.3",
+        "cheerio": "^1.0.0-rc.2",
+        "request": "^2.86.0",
         "knex": "^0.13.0",
         "koa": "^2.0.0",
         "koa-bodyparser": "^3.2.0",
