@@ -1,6 +1,6 @@
-// 获取新闻列表
-const newslist = require('../tools/crawler.js')
+const getnewsUrl = require('../class/getnewsUrl.js')
 
 module.exports = async (ctx, next) => {
-  ctx.body = newslist;
+  getnewsUrl();
+  // ctx.body = newsUrl;
 }
