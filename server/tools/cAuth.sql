@@ -34,4 +34,20 @@ CREATE TABLE `cSessionInfo` (
   KEY `skey` (`skey`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='会话管理用户信息';
 
+
+
+-- ----------------------------
+--  Table structure for `courtNewsList`
+-- ----------------------------
+DROP TABLE IF EXISTS `courtNewsList`;
+CREATE TABLE `courtNewsList` (
+  `newId` varchar(100)   NOT NULL,
+  `time` varchar(100)   NOT NULL,
+  `title` varchar(100)   NOT NULL,
+   `readnum` varchar(100)   NOT NULL,
+  `pageImgUrl` varchar(2048)   NOT NULL,
+  `pageContent` varchar(2048)   NOT NULL,
+  PRIMARY KEY (`newId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  COMMENT='会话管理新闻信息';
+
 SET FOREIGN_KEY_CHECKS = 1;

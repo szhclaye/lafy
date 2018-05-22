@@ -34,6 +34,6 @@ router.post('/message', controllers.message.post)
 
 // --- 新闻爬虫接口 Demo --- //
 // GET  请求新闻列表
-router.get('/news', controllers.getnewslist)
+router.get('/news', controllers.requestNewsDB)
 
 module.exports = router

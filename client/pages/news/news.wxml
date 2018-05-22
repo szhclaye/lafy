@@ -1,2 +1,7 @@
 <!--pages/news/news.wxml-->
-<text>pages/news/news.wxml</text>
+<import src='../../template/newsItem/newsItem.wxml' />
+<view class='news-container' wx:for="{{newslists}}" wx:key="std">
+    <template is="newsItem" data="{{item}}"></template>
+</view>
+
+

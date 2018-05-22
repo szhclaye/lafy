@@ -23,8 +23,6 @@ Page({
         that.setData({
           newslists: res.data
         })
-        
-        console.log(that.data.newslists)
       }
     })
   },

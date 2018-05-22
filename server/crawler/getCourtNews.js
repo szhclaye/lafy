@@ -72,15 +72,20 @@ const getNewsDetailContentItem = async (newsUrlItem) => {
 const start = async () => {
   var newsConentsData = []
   var newsUrlArr = await getNewsDetailUrl(url);
-  var newsConents = await Promise.all(newsUrlArr.map(item => getNewsDetailContentItem(item)))
-  const compare = property => {
-    return function (obj1, obj2) {
-      var value1 = obj1[property];
-      var value2 = obj2[property];
-      return value1 - value2;     // 升序
-    }
-  }
-  newsConentsData = newsConents.sort(compare('newId')); //
+  for(it=0;it<newsUrlArr.length;it++){
+    var newObj = await getNewsDetailContentItem(newsUrlArr[it]);
+    newsConentsData.push(newObj);
+  };
+  // console.log('newsConentsData', newsConentsData)
+  // var newsConents = await Promise.all(newsUrlArr.map(item => getNewsDetailContentItem(item)))
+  // const compare = property => {
+  //   return function (obj1, obj2) {
+  //     var value1 = obj1[property];
+  //     var value2 = obj2[property];
+  //     return value1 - value2;     // 升序
+  //   }
+  // }
+  // newsConentsData = newsConents.sort(compare('newId')); //
   newsConentsData.map(item =>{
     mysql('courtNewsList').insert(item)
                           .returning('*')

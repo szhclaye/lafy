@@ -1,0 +1,11 @@
+<template name="newsItem">
+  <view class='news-list'>
+    <view class='news-text'>
+      <text class='news-title'>{{item.title}}</text>
+      <text class='news-time'>{{item.time}}</text>
+    </view>
+    <view class="news-image">
+      <image src="{{item.pageImgUrl}}" />
+    </view>
+  </view>
+</template>
