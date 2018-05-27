@@ -1,11 +1,13 @@
 <template name="newsItem">
+ <navigator url="../newsPage/newsPage?id={{item.newId}}">
   <view class='news-list'>
     <view class='news-text'>
       <text class='news-title'>{{item.title}}</text>
       <text class='news-time'>{{item.time}}</text>
     </view>
     <view class="news-image">
-      <image src="{{item.pageImgUrl}}" />
+      <image src="{{item.pageImgUrl[0] ? item.pageImgUrl[0] : 'http://www.lafy.gov.cn/Uploads/ueditor/image/20170410/97827aba8c350fab376b87216890d168.jpg'}}" /> 
     </view>
   </view>
+  </navigator>
 </template>

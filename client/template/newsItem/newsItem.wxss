@@ -1,3 +1,8 @@
+navigator{
+  display: block;
+  width: 100%;
+}
+
 .news-list {
   width: 100%;
   height: 260rpx;
@@ -24,7 +29,7 @@
   font-size: 15px;
   color: #2f4f4f;
   margin-left: 20rpx;
-  margin-bottom: 30rpx;
+  margin-bottom: 20rpx;
 }
 
 .news-image {

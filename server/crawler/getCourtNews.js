@@ -11,8 +11,8 @@ const url = 'http://www.lafy.gov.cn/list/fayuanxinwen.html'
 var newId = 0;
 mysql('courtNewsList').del()       
                     .returning('*')
-                    .then(() => {
-                      console.log('mysql del success')
+                    .then((res) => {
+                      console.log('mysql del success-->',res)
                     })
 
 // 获取网址网址
@@ -25,7 +25,6 @@ const getNewsDetailUrl = async (url) => {
   }
   var $ = await rp(options);
   var newsUrls = [];
-  console.log(1)
   $('.listc li').each(function () {
     let _this = $(this);
     var articleItem = 'http://www.lafy.gov.cn' + _this.children('a').attr('href');
@@ -86,11 +85,12 @@ const start = async () => {
   //   }
   // }
   // newsConentsData = newsConents.sort(compare('newId')); //
+  
   newsConentsData.map(item =>{
     mysql('courtNewsList').insert(item)
                           .returning('*')
-                          .then(res =>{
-                            console.log('mysql success',res)
+                          .then((res) =>{
+                            console.log('mysql success---->',res)
                           })
   })
 }
