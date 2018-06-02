@@ -3,12 +3,13 @@
     "pages/index/index",
     "pages/news/news",
     "pages/mine/mine",
-    "pages/newsPage/newsPage"
+    "pages/newsPage/newsPage",
+    "pages/webkitPage/webkitPage"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "86d7fb",
+    "navigationBarBackgroundColor":"#D34843",
     "navigationBarTitleText": "六安微法院",
     "navigationBarTextStyle": "black"
   },
